@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Projeto Chronos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um temporizador Pomodoro focado em produtividade nos estudos, simples e eficiente.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## O que é a Técnica Pomodoro?
 
-## React Compiler
+A **Técnica Pomodoro** é um método de gerenciamento de tempo desenvolvido por **Francesco Cirillo** no final dos anos 1980. O nome vem do formato de tomate do timer de cozinha que ele usava durante a faculdade (_pomodoro_ significa "tomate" em italiano).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A ideia central é simples: **dividir o trabalho em blocos de tempo focados**, separados por pausas curtas. Isso ajuda o cérebro a manter a concentração sem se sobrecarregar.
 
-## Expanding the ESLint configuration
+### Como funciona?
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O ciclo padrão é composto por **4 etapas**:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. ** Escolha uma tarefa** — Defina o que você vai estudar ou fazer naquele momento.
+2. ** Trabalhe por 25 minutos** — Foque totalmente na tarefa, sem distrações. Esse bloco é chamado de **"um pomodoro"**.
+3. ** Faça uma pausa curta (5 minutos)** — Levante, respire, descanse os olhos.
+4. ** Repita** — A cada 4 pomodoros concluídos, faça uma **pausa longa de 15 a 30 minutos**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Por que funciona?
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Combate a procrastinação** — Começar por "apenas 25 minutos" é psicologicamente mais fácil do que encarar horas de estudo.
+- **Melhora o foco** — Saber que há uma pausa chegando ajuda o cérebro a se manter engajado.
+- **Reduz a fadiga mental** — As pausas regulares evitam o esgotamento cognitivo.
+- **Aumenta a consciência do tempo** — Você passa a entender melhor quanto tempo cada tarefa realmente demanda.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Sobre o Projeto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este projeto é uma aplicação web de **temporizador Pomodoro** voltada para estudantes, desenvolvida com o objetivo de aplicar a técnica de forma prática e acessível diretamente no navegador.
+
+### Funcionalidades
+
+- Timer configurável para sessões de foco e pausas
+- Notificação sonora ao fim de cada ciclo
+- Contador de pomodoros concluídos
+- Interface limpa e sem distrações
