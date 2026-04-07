@@ -14,10 +14,10 @@ A ideia central é simples: **dividir o trabalho em blocos de tempo focados**, s
 
 O ciclo padrão é composto por **4 etapas**:
 
-1. ** Escolha uma tarefa** — Defina o que você vai estudar ou fazer naquele momento.
-2. ** Trabalhe por 25 minutos** — Foque totalmente na tarefa, sem distrações. Esse bloco é chamado de **"um pomodoro"**.
-3. ** Faça uma pausa curta (5 minutos)** — Levante, respire, descanse os olhos.
-4. ** Repita** — A cada 4 pomodoros concluídos, faça uma **pausa longa de 15 a 30 minutos**.
+1. **Escolha uma tarefa** — Defina o que você vai estudar ou fazer naquele momento.
+2. **Trabalhe por 25 minutos** — Foque totalmente na tarefa, sem distrações. Esse bloco é chamado de **"um pomodoro"**.
+3. **Faça uma pausa curta (5 minutos)** — Levante, respire, descanse os olhos.
+4. **Repita** — A cada 4 pomodoros concluídos, faça uma **pausa longa de 15 a 30 minutos**.
 
 ### Por que funciona?
 
