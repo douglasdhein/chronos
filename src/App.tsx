@@ -1,17 +1,50 @@
 import { Fragment } from 'react/jsx-runtime';
-import { Heading } from './components/Heading';
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
+import { Menu } from './components/Menu';
+import { CountDown } from './components/CountDown';
 import './styles/theme.css';
 import './styles/global.css';
 
 export function App() {
   return (
     <Fragment>
-      <Heading>Heading</Heading>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit eos
-        soluta illo pariatur atque aspernatur molestiae at sunt aliquid eveniet,
-        adipisci quo cumque, iste sed autem tempora nostrum dolorem eius!
-      </p>
+      <Container>
+        <Logo />
+      </Container>
+
+      <Container>
+        <Menu />
+      </Container>
+
+      <Container>
+        <CountDown />
+      </Container>
+
+      <Container>
+        <form className="form" action="">
+          <div className="formRow">
+            <label htmlFor="input">Task</label>
+            <input id="input" type="text" />
+          </div>
+
+          <div className="formRow">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className="formRow">
+            <p>Ciclos</p>
+          </div>
+
+          <div className="formRow">
+            <p>0 0 0 0 0</p>
+          </div>
+
+          <div className="formRow">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </Container>
     </Fragment>
   );
 }
