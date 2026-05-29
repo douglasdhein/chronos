@@ -56,8 +56,6 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
       worker.terminate();
     }
 
-    document.title = `${state.formattedSecondsRemaining} - Chronos`;
-
     worker.postMessage(state);
   }, [worker, state]);
 
