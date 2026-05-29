@@ -5,6 +5,8 @@ import { DefaultButton } from '../../components/DefaultButton';
 import { TrashIcon } from 'lucide-react';
 import styles from './style.module.css';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
+import { formatDate } from '../../utils/formatDate';
+import { getTaskStatus } from '../../utils/getTaskStatus';
 
 export function History() {
   const { state } = useTaskContext();
@@ -39,13 +41,19 @@ export function History() {
             </thead>
             <tbody>
               {state.tasks.map((task) => {
+                const taskTypeTranslate = {
+                  workTime: 'Foco',
+                  shortBreakTime: 'Descanso curto',
+                  longBreakTime: 'Descanso longo',
+                };
+
                 return (
                   <tr key={task.id}>
                     <td>{task.name}</td>
-                    <td>{task.duration}</td>
-                    <td>{new Date(task.startDate).toISOString()}</td>
-                    <td>{task.interruptDate}</td>
-                    <td>{task.type}</td>
+                    <td>{task.duration} minutos</td>
+                    <td>{formatDate(task.startDate)}</td>
+                    <td>{getTaskStatus(task, state.activeTask)}</td>
+                    <td>{taskTypeTranslate[task.type]}</td>
                   </tr>
                 );
               })}
