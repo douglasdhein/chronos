@@ -1,6 +1,6 @@
 import { TimerIcon } from 'lucide-react';
-import styles from './style.module.css';
 import { RouterLink } from '../RouterLink';
+import styles from './style.module.css';
 
 export function Logo() {
   return (

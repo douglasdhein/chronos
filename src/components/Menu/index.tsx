@@ -6,8 +6,8 @@ import {
   SunIcon,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import styles from './style.module.css';
 import { RouterLink } from '../RouterLink';
+import styles from './style.module.css';
 
 type AvailableThemes = 'dark' | 'light';
 
