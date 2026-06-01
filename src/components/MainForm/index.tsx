@@ -57,7 +57,7 @@ export function MainForm() {
     <form onSubmit={handleCreateNewTask} className="form" action="">
       <div className="formRow">
         <DefaultInput
-          labelText="Funcionando?"
+          labelText="Digite uma tarefa:"
           id="meuInput"
           type="text"
           placeholder="Digite algo"
