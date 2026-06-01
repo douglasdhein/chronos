@@ -65,4 +65,4 @@ http://localhost:3000
 
 Ou acesse pelo link abaixo:
 
-[Clique aqui para acessar](https://github.com/douglasdhein/chronos)
+[Clique aqui para acessar](https://chronos-nine-nu.vercel.app/)
