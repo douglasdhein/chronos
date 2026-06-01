@@ -38,3 +38,29 @@ Este projeto é uma aplicação web de **temporizador Pomodoro** voltada para es
 - Notificação sonora ao fim de cada ciclo
 - Contador de pomodoros concluídos
 - Interface limpa e sem distrações
+
+### Como rodar localmente
+
+Antes de iniciar, tenha o Node.js instalado na máquina.
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Acesse a aplicação no navegador:
+
+```txt
+http://localhost:3000
+```
+
+Ou acesse pelo link abaixo:
+
+[Clique aqui para acessar](https://github.com/douglasdhein/chronos)
