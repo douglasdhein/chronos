@@ -39,6 +39,8 @@ Este projeto é uma aplicação web de **temporizador Pomodoro** voltada para es
 - Contador de pomodoros concluídos
 - Interface limpa e sem distrações
 
+---
+
 ### Como rodar localmente
 
 Antes de iniciar, tenha o Node.js instalado na máquina.
