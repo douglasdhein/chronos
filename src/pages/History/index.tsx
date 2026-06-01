@@ -41,11 +41,14 @@ export function History() {
   function handleResetHistory() {
     showMessage.dismiss();
 
-    showMessage.confirm('Você tem certeza de que deseja excluir o histórico?', (confirmation) => {
-      if (!confirmation) return;
+    showMessage.confirm(
+      'Você tem certeza de que deseja excluir o histórico?',
+      (confirmation) => {
+        if (!confirmation) return;
 
-      dispatch({ type: TaskActionTypes.RESET_STATE });
-    });
+        dispatch({ type: TaskActionTypes.RESET_STATE });
+      },
+    );
   }
 
   return (
@@ -124,7 +127,9 @@ export function History() {
         )}
 
         {!hasTasks && (
-          <p className={styles.p}>Ainda não existem tarefas criadas.</p>
+          <p style={{ textAlign: 'center', fontWeight: 'bold' }}>
+            Ainda não existem tarefas criadas.
+          </p>
         )}
       </Container>
     </MainTemplate>
