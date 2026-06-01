@@ -4,8 +4,25 @@ import { Heading } from '../../components/Heading';
 import { DefaultInput } from '../../components/DefaultInput';
 import { DefaultButton } from '../../components/DefaultButton';
 import { SaveIcon } from 'lucide-react';
+import { useRef } from 'react';
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 
 export function Settings() {
+  const { state } = useTaskContext();
+  const workTimeInput = useRef<HTMLInputElement>(null);
+  const shortBreakTimeInput = useRef<HTMLInputElement>(null);
+  const longBreakTimeInput = useRef<HTMLInputElement>(null);
+
+  function handleSaveSettings(e: React.SubmitEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const workTime = workTimeInput.current?.value;
+    const shortBreakTime = shortBreakTimeInput.current?.value;
+    const longBreakTime = longBreakTimeInput.current?.value;
+
+    console.log(workTime, shortBreakTime, longBreakTime);
+  }
+
   return (
     <MainTemplate>
       <Container>
@@ -20,20 +37,29 @@ export function Settings() {
       </Container>
 
       <Container>
-        <form action="" className="form">
+        <form onSubmit={handleSaveSettings} action="" className="form">
           <div className="formRow">
-            <DefaultInput id="workTime" labelText="Foco"></DefaultInput>
+            <DefaultInput
+              id="workTime"
+              labelText="Foco"
+              ref={workTimeInput}
+              defaultValue={state.config.workTime}
+            ></DefaultInput>
           </div>
           <div className="formRow">
             <DefaultInput
               id="shortBreakTime"
               labelText="Descanso Curto"
+              ref={shortBreakTimeInput}
+              defaultValue={state.config.shortBreakTime}
             ></DefaultInput>
           </div>
           <div className="formRow">
             <DefaultInput
               id="longBreakTime"
               labelText="Descanso Longo"
+              ref={longBreakTimeInput}
+              defaultValue={state.config.longBreakTime}
             ></DefaultInput>
           </div>
           <div className="formRow">
