@@ -6,7 +6,7 @@ import { TrashIcon } from 'lucide-react';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 import { formatDate } from '../../utils/formatDate';
 import { getTaskStatus } from '../../utils/getTaskStatus';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { sortTasks, type SortTasksOptions } from '../../utils/sortTaks';
 import { showMessage } from '../../adapters/showMessage';
 import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
@@ -50,6 +50,10 @@ export function History() {
       },
     );
   }
+
+  useEffect(() => {
+    document.title = 'Histórico de Tarefas - Chronos';
+  }, []);
 
   return (
     <MainTemplate>
